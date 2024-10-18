@@ -44,5 +44,8 @@ jobs:
         env:
           exit_code: 1
           post_exit_code: 1
+      - name: call-node
+        id: call-node
+        uses: ./call-node
       - run: |
           echo hello world

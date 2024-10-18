@@ -1,0 +1,44 @@
+runs:
+  using: "composite"
+  steps:
+    - name: (call) composite (0)
+      id: composite-0
+      uses: ./composite
+      env:
+        exit_code: 0
+
+    - name: (call) composite (1)
+      id: composite-1
+      uses: ./composite
+      continue-on-error: true
+      env:
+        exit_code: 1
+    - name: (call) node (0/0)
+      id: node-0-0
+      uses: ./node
+      env:
+        exit_code: 0
+        post_exit_code: 0
+    - name: (call) node (1/0)
+      id: node-1-0
+      uses: ./node
+      continue-on-error: true
+      env:
+        exit_code: 1
+        post_exit_code: 0
+    - name: (call) node (0/1)
+      id: node-0-1
+      uses: ./node
+      continue-on-error: true
+      env:
+        exit_code: 0
+        post_exit_code: 1
+    - name: (call) node (1/1)
+      id: node-1-1
+      uses: ./node
+      continue-on-error: true
+      env:
+        exit_code: 1
+        post_exit_code: 1
+    - run: |
+        echo hello world
