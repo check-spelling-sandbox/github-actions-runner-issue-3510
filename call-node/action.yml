@@ -10,7 +10,7 @@ runs:
     - name: (call) composite (1)
       id: composite-1
       uses: ./composite
-      # continue-on-error: true
+      continue-on-error: true
       env:
         exit_code: 1
     - name: (call) node (0/0)
