@@ -29,7 +29,7 @@ runs:
     - name: (call) node (0/1)
       id: node-0-1
       uses: ./node
-      continue-on-error: true
+      # continue-on-error: true
       env:
         exit_code: 0
         post_exit_code: 1

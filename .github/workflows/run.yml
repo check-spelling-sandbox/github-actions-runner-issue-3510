@@ -47,6 +47,6 @@ jobs:
       - name: call-node
         id: call-node
         uses: ./call-node
-        # continue-on-error: true
+        continue-on-error: true
       - run: |
           echo hello world
