@@ -3,6 +3,7 @@ runs:
   steps:
     - name: (call) (call) node
       id: call-node
+      continue-on-error: true
       uses: ./call-node
     - shell: bash
       run: |
