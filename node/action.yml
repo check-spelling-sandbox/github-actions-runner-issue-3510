@@ -1,4 +1,4 @@
 runs:
   using: 'node20'
-  main: 'node/index.js'
-  post: 'node/post.js'
+  main: 'index.js'
+  post: 'post.js'
