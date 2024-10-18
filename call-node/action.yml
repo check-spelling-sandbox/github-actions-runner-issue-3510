@@ -40,5 +40,6 @@ runs:
       env:
         exit_code: 1
         post_exit_code: 1
-    - run: |
+    - shell: bash
+      run: |
         echo hello world
