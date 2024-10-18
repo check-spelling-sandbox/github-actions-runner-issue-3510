@@ -1,0 +1,9 @@
+runs:
+  using: "composite"
+  steps:
+    - name: (call) (call) node
+      id: call-node
+      uses: ./call-node
+    - shell: bash
+      run: |
+        echo hello world
